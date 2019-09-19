@@ -4,7 +4,7 @@ pack: emailaction
 runner_type: "python-script"
 description: action create instance!
 enabled: true
-entry_point: wap.py
+entry_point: create.py
 parameters:
      ImageId:
         type: "string"
