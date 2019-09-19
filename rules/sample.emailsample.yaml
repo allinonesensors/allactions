@@ -1,0 +1,19 @@
+---
+name: Sample123
+description: "Rule which sends an email when an email from johndoe@gmail.com is received"
+pack: emailaction
+enabled: true
+trigger:
+  type: emailaction.imap.message
+  parameters: {}
+criteria:
+  trigger.subject:
+    pattern: create vm 
+    type: contains
+action:
+  ref: emailaction.create_instance
+  parameters:
+    ImageId: 'ami-0d2692b6acea72ee6'
+    InstanceType: 't2.micro'
+    KeyName: 'ec2-keypair'
+    

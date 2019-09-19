@@ -1,0 +1,15 @@
+---
+name: terminate_instance
+pack: emailaction
+runner_type: "python-script"
+description: action to terminate  instance!
+enabled: true
+entry_point: terminate.py
+parameters:
+     InstanceIds:
+        type: "string"
+        description: "Enter the AWS EC2 Instance ID to terminate"
+        required: true 
+        position: 0
+        
+     
